@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace CheeseMVC.Controllers
 {
@@ -21,7 +22,7 @@ namespace CheeseMVC.Controllers
 
         public IActionResult Index()
         {
-            List<Menu> menus = context.Menus.ToList();
+            IList<Menu> menus = context.Menus.ToList();
             return View(menus);
         }
 
